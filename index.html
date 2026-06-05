@@ -4,313 +4,66 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="[Course description for SEO]" />
-  <title>[COURSE CODE]: [Course Title], [Season Year]</title>
+  <title>MATH 156: Machine Learning</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet" />
-
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --navy:       #1B2A4A;
-      --accent:     #B85C1A;
-      --bg:         #F8F7F4;
-      --surface:    #FFFFFF;
-      --border:     #DDD9D0;
-      --text:       #1E1E1E;
-      --text-muted: #6B6860;
-      --text-light: #9B9890;
-      --serif:      'Crimson Pro', Georgia, serif;
-      --sans:       'DM Sans', system-ui, sans-serif;
-      --max-width:  780px;
-    }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: var(--sans);
-      background: var(--bg);
-      color: var(--text);
-      font-size: 16px;
-      line-height: 1.75;
-    }
-
-    /* ── Header ─────────────────────────────────────────── */
-    .site-header {
-      background: var(--navy);
-      color: #fff;
-      padding: 2.5rem 2rem 2.25rem;
-    }
-
-    .header-inner {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      display: flex;
-      align-items: flex-start;
-      gap: 1.5rem;
-    }
-
-    .logo-area a { display: block; }
-    .logo-area img { height: 56px; width: auto; }
-
-    .logo-placeholder {
-      height: 56px;
-      width: 56px;
-      background: rgba(255,255,255,0.12);
-      border: 1px solid rgba(255,255,255,0.25);
-      border-radius: 6px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 10px;
-      color: rgba(255,255,255,0.55);
-      text-align: center;
-      line-height: 1.4;
-      letter-spacing: 0.03em;
-    }
-
-    .header-text h1 {
-      font-family: var(--serif);
-      font-size: 1.85rem;
-      font-weight: 600;
-      line-height: 1.3;
-      color: #fff;
-    }
-
-    .header-text h1 a { color: inherit; text-decoration: none; }
-
-    .header-text h1 .subtitle {
-      display: block;
-      font-weight: 300;
-      font-size: 0.88em;
-      opacity: 0.85;
-      margin-top: 0.1rem;
-    }
-
-    .header-meta {
-      list-style: none;
-      margin-top: 0.85rem;
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.15rem 1.5rem;
-      font-size: 0.875rem;
-      color: rgba(255,255,255,0.78);
-    }
-
-    .header-meta a {
-      color: rgba(255,255,255,0.9);
-      text-decoration: underline;
-      text-underline-offset: 2px;
-    }
-
-    .header-meta a:hover { color: #fff; }
-
-    /* ── Main layout ─────────────────────────────────────── */
-    main {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 2.75rem 2rem 4rem;
-    }
-
-    /* ── Sections ────────────────────────────────────────── */
-    section { margin-bottom: 3rem; }
-
-    section h2 {
-      font-family: var(--serif);
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: var(--navy);
-      border-bottom: 2px solid var(--navy);
-      padding-bottom: 0.35rem;
-      margin-bottom: 1.1rem;
-    }
-
-    section p { margin-bottom: 0.85rem; }
-    section p:last-child { margin-bottom: 0; }
-
-    section ul, section ol {
-      padding-left: 1.5rem;
-      margin-bottom: 0.85rem;
-    }
-
-    section li { margin-bottom: 0.3rem; }
-
-    section a { color: var(--accent); text-decoration: none; }
-    section a:hover { text-decoration: underline; text-underline-offset: 2px; }
-
-    /* ── Grading table ───────────────────────────────────── */
-    .grade-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 1rem 0 1.25rem;
-      font-size: 0.875rem;
-    }
-
-    .grade-table th,
-    .grade-table td {
-      border: 1px solid var(--border);
-      padding: 0.45rem 0.6rem;
-      text-align: center;
-    }
-
-    .grade-table thead th {
-      background: var(--navy);
-      color: #fff;
-      font-weight: 500;
-    }
-
-    .grade-table tbody tr:nth-child(even) td { background: #F2F0EC; }
-
-    /* ── Policy blocks ───────────────────────────────────── */
-    .policy-block { margin: 1.1rem 0; }
-
-    .policy-block > strong {
-      display: block;
-      color: var(--navy);
-      font-weight: 500;
-      margin-bottom: 0.25rem;
-    }
-
-    .oh-entry {
-      font-size: 0.9rem;
-      margin: 0.35rem 0 0.35rem 1rem;
-    }
-
-    /* ── Resources ───────────────────────────────────────── */
-    #resources h2 { margin-bottom: 1.75rem; }
-
-    .topic { margin-bottom: 2.75rem; }
-
-    .topic-header {
-      display: flex;
-      align-items: baseline;
-      gap: 0.75rem;
-      margin-bottom: 0.6rem;
-    }
-
-    .topic-number {
-      font-family: var(--serif);
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--accent);
-      flex-shrink: 0;
-    }
-
-    .topic-title {
-      font-family: var(--serif);
-      font-size: 1.2rem;
-      font-weight: 600;
-      color: var(--navy);
-    }
-
-    /* Each note/lecture row */
-    .entry {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      gap: 1rem;
-      padding: 0.65rem 0;
-      border-top: 1px solid var(--border);
-    }
-
-    .entry:last-child { border-bottom: 1px solid var(--border); }
-
-    .entry-title {
-      font-size: 0.95rem;
-      color: var(--text);
-      flex: 1;
-      min-width: 0;
-    }
-
-    .entry-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.25rem 0.6rem;
-      flex-shrink: 0;
-      font-size: 0.78rem;
-    }
-
-    .entry-links a {
-      color: var(--accent);
-      text-decoration: none;
-      white-space: nowrap;
-    }
-
-    .entry-links a::before { content: "↗ "; font-size: 0.68rem; }
-    .entry-links a:hover { text-decoration: underline; }
-
-    /* Placeholder styling for entries not yet uploaded */
-    .entry-links a.pending {
-      color: var(--text-light);
-      pointer-events: none;
-      cursor: default;
-    }
-
-    .entry-links a.pending::before { content: ""; }
-
-    /* ── Footer ──────────────────────────────────────────── */
-    footer {
-      background: var(--navy);
-      color: rgba(255,255,255,0.6);
-      font-size: 0.82rem;
-      padding: 1.5rem 2rem;
-      text-align: center;
-    }
-
-    footer a {
-      color: rgba(255,255,255,0.82);
-      text-decoration: underline;
-      text-underline-offset: 2px;
-    }
-
-    /* ── Responsive ──────────────────────────────────────── */
-    @media (max-width: 600px) {
-      .header-inner { flex-direction: column; gap: 1rem; }
-      .header-text h1 { font-size: 1.5rem; }
-      .entry { flex-direction: column; gap: 0.3rem; }
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
-<!-- ═══════════════════════════ HEADER ════════════════════════════════ -->
-<header class="site-header">
-  <div class="header-inner">
+<!-- ═══════════════════════════ SIDEBAR ═══════════════════════════════ -->
+<aside class="sidebar">
 
-    <!--
-      Logo: replace the .logo-placeholder div with a real <img> tag.
-      Example: <img src="assets/dept-logo.png" alt="Math Department" />
-      Or remove the .logo-area block entirely if you don't have a logo.
-    -->
-    <div class="logo-area">
-      <a href="#">
-        <div class="logo-placeholder">DEPT<br>LOGO</div>
-      </a>
-    </div>
-
-    <div class="header-text">
-      <h1>
-        <a href="index.html">
-          MATH 156: Introduction to Machine Learning
-          <span class="subtitle">Fall 2025</span>
-        </a>
-      </h1>
-
-      <ul class="header-meta">
-        <li>Time: Tuesday &amp; Thursday, 2:00 – 3:50 pm</li>
-        <li>Location: [Building &amp; Room]</li>
-        <li>Instructor: <a href="#">[Your Name]</a></li>
-        <li>Teaching assistant: <a href="#">[TA Name]</a></li>
-        <li>Platforms: <a href="#">[Course Portal]</a>, <a href="#">[Discussion Forum]</a></li>
-      </ul>
-    </div>
-
+  <!--
+    Logo: replace the .logo-placeholder div with a real <img> tag.
+    Example: <img src="assets/dept-logo.png" alt="Math Department" />
+    Or remove .sidebar-logo entirely if you don't have a logo.
+  -->
+  <div class="sidebar-logo">
+    <a href="#">
+      <div class="logo-placeholder">DEPT<br>LOGO</div>
+    </a>
   </div>
-</header>
 
-<!-- ═══════════════════════════ MAIN ══════════════════════════════════ -->
+  <h1 class="sidebar-title">
+    <a href="index.html">MATH 156: Introduction to Machine Learning</a>
+  </h1>
+  <div class="sidebar-season">Fall 2025</div>
+
+  <hr class="sidebar-divider" />
+
+  <ul class="sidebar-meta">
+    <li>
+      <span class="meta-label">Time</span>
+      <span class="meta-value">Tue &amp; Thu, 2:00 – 3:50 pm</span>
+    </li>
+    <li>
+      <span class="meta-label">Location</span>
+      <span class="meta-value">[Building &amp; Room]</span>
+    </li>
+    <li>
+      <span class="meta-label">Instructor</span>
+      <span class="meta-value"><a href="#">[Your Name]</a></span>
+    </li>
+    <li>
+      <span class="meta-label">Teaching assistant</span>
+      <span class="meta-value"><a href="#">[TA Name]</a></span>
+    </li>
+    <li>
+      <span class="meta-label">Platforms</span>
+      <span class="meta-value">
+        <a href="#">[Course Portal]</a>,
+        <a href="#">[Discussion Forum]</a>
+      </span>
+    </li>
+  </ul>
+
+</aside>
+
+<!-- ═══════════════════════════ PAGE BODY ═════════════════════════════ -->
+<div class="page-body">
 <main>
 
   <!-- ── Course Description ── -->
@@ -484,7 +237,6 @@
           <a href="#" class="pending">Video</a>
         </div>
       </div>
-
     </div>
 
     <!-- ─ Topic 2 ─ -->
@@ -523,7 +275,6 @@
           <a href="#" class="pending">Video</a>
         </div>
       </div>
-
     </div>
 
     <!-- ─ Topic 3 ─ -->
@@ -562,7 +313,6 @@
           <a href="#" class="pending">Video</a>
         </div>
       </div>
-
     </div>
 
     <!-- ─ Topic 4 ─ -->
@@ -591,7 +341,6 @@
           <a href="#" class="pending">Video</a>
         </div>
       </div>
-
     </div>
 
   </section>
@@ -603,17 +352,19 @@
       [Optional: credit colleagues whose lecture notes or other materials you
       have drawn upon. If you use any material, please apply credits recursively.]
     </p>
+    <p>
+        This site is maintained by Aryan Dalal, Undergraduate at UCLA. If you have encounter any issues, please email <a href="mailto:aryandalal@ula.edu">aryandalal@ucla.edu</a>. Thanks!
+    </P
   </section>
 
 </main>
 
 <!-- ═══════════════════════════ FOOTER ═══════════════════════════════ -->
 <footer>
-  <p>
-    MATH 156 &middot; [University Name] &middot; Fall 2025 &middot;
-    <a href="mailto:course-email@university.edu">course-email@university.edu</a>
-  </p>
+  MATH 156 &middot; UCLA &middot; All Quarters &middot;
+  <a href="mailto:aryandalal@ula.edu">aryandalal@ucla.edu</a>
 </footer>
+</div><!-- /.page-body -->
 
 </body>
 </html>
