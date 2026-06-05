@@ -302,6 +302,43 @@ section a:hover { text-decoration: underline; text-underline-offset: 2px; }
 .toc-list .toc-sub a:hover { color: var(--text-muted); }
 .toc-list .toc-sub a.active { color: var(--text-muted); border-left-color: var(--accent); font-weight: 400; }
 
+/* ── TOC quote ───────────────────────────────────────── */
+.toc-quote {
+  margin-top: 2.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid var(--border);
+}
+ 
+.toc-quote blockquote {
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: var(--text-muted);
+}
+ 
+.toc-quote blockquote::before {
+  content: '\201C';
+  display: block;
+  font-size: 1.75rem;
+  line-height: 1;
+  color: var(--accent);
+  opacity: 0.5;
+  margin-bottom: 0.2rem;
+  font-style: normal;
+}
+ 
+.toc-quote cite {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.68rem;
+  font-style: normal;
+  font-family: var(--sans);
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: var(--text-light);
+}
+
 /* ── Footer ──────────────────────────────────────────── */
 footer {
   background: var(--navy);
