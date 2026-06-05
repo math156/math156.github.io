@@ -1,7 +1,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --sidebar-w:  260px;
+  --sidebar-w:  300px;
   --navy:       #1B2A4A;
   --accent:     #B85C1A;
   --bg:         #F8F7F4;
@@ -20,7 +20,7 @@ body {
   font-family: var(--sans);
   background: var(--bg);
   color: var(--text);
-  font-size: 16px;
+  font-size: 14px;
   line-height: 1.75;
 }
 
