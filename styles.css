@@ -233,14 +233,14 @@ section a:hover { text-decoration: underline; text-underline-offset: 2px; }
 
 .entry:last-child { border-bottom: 1px solid var(--border); }
 
-.entry-title { font-size: 0.95rem; color: var(--text); flex: 1; min-width: 0; }
+.entry-title { font-size: 0.75rem; color: var(--text); flex: 1; min-width: 0; }
 
 .entry-links {
   display: flex;
   flex-wrap: wrap;
   gap: 0.25rem 0.6rem;
   flex-shrink: 0;
-  font-size: 0.78rem;
+  font-size: 0.65rem;
 }
 
 .entry-links a { color: var(--accent); text-decoration: none; white-space: nowrap; }
