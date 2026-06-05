@@ -153,7 +153,7 @@ section h2 {
   color: var(--navy);
   border-bottom: 2px solid var(--navy);
   padding-bottom: 0.35rem;
-  margin-bottom: 1.1rem;
+  margin-bottom: 0.5rem;
 }
 
 section p { margin-bottom: 0.25rem; }
