@@ -132,10 +132,11 @@ body {
 .content-wrapper {
   flex: 1;
   display: grid;
-  grid-template-columns: minmax(0, 640px) 160px;
+  grid-template-columns: minmax(0, 1fr) 220px;
   gap: 0 4rem;
   padding: 3rem 3rem 4rem 2.5rem;
-  max-width: 960px;
+  max-width: 1400px;
+  margin: 0 auto;
   align-items: start;
 }
 
