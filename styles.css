@@ -144,7 +144,7 @@ body {
 main { min-width: 0; }
 
 /* ── Sections ────────────────────────────────────────── */
-section { margin-bottom: 1.5rem; }
+section { margin-bottom: 1rem; }
 
 section h2 {
   font-family: var(--serif);
@@ -156,7 +156,7 @@ section h2 {
   margin-bottom: 1.1rem;
 }
 
-section p { margin-bottom: 0.5rem; }
+section p { margin-bottom: 0.25rem; }
 section p:last-child { margin-bottom: 0; }
 
 section ul, section ol { padding-left: 1.5rem; margin-bottom: 0.85rem; }
@@ -198,7 +198,7 @@ section a:hover { text-decoration: underline; text-underline-offset: 2px; }
 /* ── Resources ───────────────────────────────────────── */
 #resources h2 { margin-bottom: 1.75rem; }
 
-.topic { margin-bottom: 1.75rem; }
+.topic { margin-bottom: 1.5rem; }
 
 .topic-header {
   display: flex;
@@ -227,7 +227,7 @@ section a:hover { text-decoration: underline; text-underline-offset: 2px; }
   align-items: baseline;
   justify-content: space-between;
   gap: 1rem;
-  padding: 0.4rem 0;
+  padding: 0.3rem 0;
   border-top: 1px solid var(--border);
 }
 
